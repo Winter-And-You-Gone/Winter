@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" style="height: 711px">
+<head>
+  <meta charset="UTF-8">
+  <title>识别测试网页</title>
+  <style>
+    #gyp:hover {opacity: 0.8}
+    #gyp1:hover {opacity: 0.8}
+    input:hover {opacity: 0.8}
+    table{border-collapse: collapse;}
+    .parentDiv{
+      position: relative;
+    }
+    .div1{
+      position: absolute;
+      z-index: 1;
+    }
+    .div2{
+      position: absolute;
+      z-index: 2;
+    }
+ </style>
+</head>
+  <body style="background-image: url('../static/images/1.png');background-repeat: repeat;background-size: cover">
+    <div style="text-align: center;margin-top: 15%;width: 100%;height: 100%">
+      <p><h1 style="color: white">请选择图片文件</h1></p>
+      <form action="" method="post" enctype="multipart/form-data">
+        <div class="parentDiv" id="gyp1">
+          <div class="div1">
+            <span style="cursor: pointer;font-weight: bold;color: white;background-color: dodgerblue;font-size: 150%;width: 140%;height: 45px;
+            float: left;margin-left: 455%;margin-top: 10%;padding: 0;border: 0;border-radius: 30px">
+            浏览本地文件</span>
+          </div>
+          <div class="div2">
+            <input name="img_file" type="file" formenctype="multipart/form-data" style="cursor: pointer;color: white;
+            background-color: dodgerblue;font-size: 420%;opacity: 0;
+            float: left;margin-left: 328.3%;margin-top: 10%;width: 200px;height: 45px;padding: 0;border: 0;border-radius: 30px">
+          </div>
+        </div>
+        <div id="gyp">
+          <input name="ok" type="submit" value="上传" style="cursor: pointer;font-weight: bold;color: white;background-color: dodgerblue;font-size: 150%;
+          float: left;margin-left: 45%;margin-top: 8%;width: 10%;height: 45px;padding: 0;border: 0;border-radius: 30px">
+        </div>
+      </form>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>冬天和你走了</title>
+    <style>
+ table{
+      background-color: white;
+      border-collapse: collapse;
+      color: black;
+        }
+    td{
+
+     border: 1px solid black;
+
+}
+    </style>
+</head>
+<body style="background-color: white">
+  <div style="text-align: left">
+      <img src="../static/images/{{f_name}}" alt="图片显示失败" title="图片" style="max-width: 200px;max-height: 200px;vertical-align: middle">
+      <p><a href="{{baike_url}}" title="{{baike}}" target="_blank">相关百度百科链接</a></p>
+      <table style="width: 100%;">
+        {% for item in list %}
+      <tr>
+        <td>{{item.num}}</td>
+        <td>{{item.keyword}}</td>
+        <td style="word-break: break-all">{{item.root}}</td>
+      </tr>
+        {%endfor%}
+      </table>
+  </div>
+</body>
+</html>

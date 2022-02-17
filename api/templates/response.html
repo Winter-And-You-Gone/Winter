@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>冬天和你走了</title>
+    <style>
+ table{
+      background-color: white;
+      border-collapse: collapse;
+      color: black;
+        }
+    td{
+
+     border: 1px solid black;
+
+}
+    </style>
+</head>
+<body style="background-color: white">
+  <div style="text-align: left">
+      <table>
+        {% for item in list %}
+      <tr>
+        <td>{{item.num}}</td>
+        <td>{{item.name}}</td>
+        <td style="word-break: break-all">{{item.comment}}</td>
+      </tr>
+        {%endfor%}
+      </table>
+  </div>
+</body>
+</html>
