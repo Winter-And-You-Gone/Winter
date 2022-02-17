@@ -1,9 +1,6 @@
-import bs4
 from flask import Flask, request, render_template
 import requests
 import base64
-import json
-import time
 n = 0
 
 
