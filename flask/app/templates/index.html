@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+
+<html lang="zh-CN" style="width: 100%;height: 100%">
+<head>
+    <meta charset="UTF-8">
+    <title>未来史学派</title>
+    <style>
+        .bo {
+            width: 100%;
+            height: 100%;
+            background-image: url("../static/images/1.png");
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            margin: 0;
+        }
+
+        .content {
+            text-align: center;
+            color: white;
+            margin-top: 5%;
+        }
+    </style>
+</head>
+<body class="bo">
+{% extends 'base.html' %}
+{% block content %}
+<div class="content">
+    <h1>欢迎, {{ current_user.username }} !</h1>
+    <h2>看看腿</h2>
+    <img src="../static/images/pretty_legs.jpg" alt="好东西" style="max-width: 30%;max-height: 30%">
+
+    {% for post in posts %}
+    <div><p>{{ post.author.username }}
+        <b>{{ post.body }}</b></p></div>
+    {% endfor %}
+
+    {% endblock %}
+</div>
+</body>
+</html>

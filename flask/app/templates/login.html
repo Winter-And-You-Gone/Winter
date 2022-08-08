@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC
+        "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" content="未来史学派">
+    <title>未来史学派</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/background.css"/>
+</head>
+<body class="bo">
+<canvas id="canvas"></canvas>
+<div class="content">
+    <p id="tit">未来史学派</p>
+    <p>还没注册? <a id="dc" href="{{ url_for('register') }}">点此注册</a></p>
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+        <p>
+            {{ form.username.label() }}<br/>
+            {{ form.username() }}<br/>
+            {% for error in form.username.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>
+            {{ form.password.label() }}<br/>
+            {{ form.password() }}<br/>
+            {% for error in form.password.errors %}
+            <span class="error">[{{ error }}]</span>
+            {% endfor %}
+        </p>
+        <p>{{ form.remember_me() }} {{ form.remember_me.label(id="remember_me") }}</p>
+        <div class="warning">
+            {% for message in get_flashed_messages() %}
+            {{ message }}
+            {% endfor %}
+        </div>
+        {{ form.submit() }}
+    </form>
+</div>
+<script type="text/javascript" src="../static/js/background.js"></script>
+</body>
+</html>
