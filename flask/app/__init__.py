@@ -10,8 +10,6 @@ app = Flask(__name__)
 app.config.from_object(Config)
 db = SQLAlchemy(app)
 migrate = Migrate(app, db)
-# manger = Manager(app)
-# manger.add_command('db', MigrateCommand)
 login = LoginManager(app)
 login.login_view = 'login'
 login.login_message = '欢迎使用，请登录'
